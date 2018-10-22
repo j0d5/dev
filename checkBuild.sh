@@ -15,7 +15,7 @@ checkForDebugBuild () {
 
     __check_encryption "$file"
 
-    __check_bitcode_available "$file"
+    __check_bitcode_availability "$file"
 
     __check_for_assertion "$file"
 
@@ -104,7 +104,7 @@ __check_encryption () {
 }
 
 # Checks if the library contains information about bitcode
-__check_bitcode_available () {
+__check_bitcode_availability () {
     __print "Check if bitcode is available" "info"
     if ! [ -x "$(command -v otool)" ]; then
         __print "otool not available!" "error"
@@ -127,9 +127,9 @@ __check_bitcode_available () {
     done
 
     if [ $CONTAINS_LLVM = true ] && [ $CONTAINS_FILESIZE = true ]; then
-        __print "Bitcode info found!" "success"
+        __print "Bitcode active!" "success"
     else
-        __print "No Bitcode info found!"
+        __print "Bitcode inactive!"
     fi
     __print
 }

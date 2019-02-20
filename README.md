@@ -4,6 +4,8 @@ Contains some hopefully helpful scripts for development.
 
 - [Usage](#usage)
 - [checkBuild](#checkbuild)
+- [checkCoverage](#checkcoverage)
+- [checkForFlaggedTests](#checkforflaggedtests)
 
 ## Usage
 
@@ -42,3 +44,19 @@ The script takes one parameter which is the path to the artifact to check:
 If you check a build artifact with this script it will look like:
 
 ![checkBuild.sh](./images/shell-checkBuild.png "checkBuild.sh")
+
+## checkCoverage
+
+This script is intended to be used for Xcode schemes which will be build and calls xcrun to view the coverage reports.
+
+## checkForFlaggedTests
+
+This script is intended to be used with Swift or Objective C written tests. It
+should be called in the folder where the tests are placed or at least in the
+project folder.
+
+It will search all `.swift` and `.m` files for patterns like `fit()`
+
+### Requirements
+
+- This script needs the famous [silver searcher](https://github.com/ggreer/the_silver_searcher)

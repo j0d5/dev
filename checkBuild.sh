@@ -30,6 +30,7 @@ __check_architectures () {
         return
     fi
 
+    # there're 2 architectures which are not build at the moment: arm64e, armv7s
     VALID_ARCHS="i386 x86_64 armv7 arm64"
     ARCHITECTURES="$(lipo -info "$1" | rev | cut -d ':' -f1 | rev)"
     IS_FAT=true
@@ -213,4 +214,3 @@ if [ -e "$1" ]; then
 else
     __print "File $1 not found!" "error"
 fi
-

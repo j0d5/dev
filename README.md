@@ -9,7 +9,8 @@ Contains some hopefully helpful scripts for development.
 
 ## Usage
 
-To make use of these scripts you can clone this repository to your preferred location like:
+To make use of these scripts you can clone this repository to your preferred
+location like:
 
     git clone https://github.com/tweetjay/dev.git
 
@@ -25,7 +26,8 @@ Afterwards you should be able to call the script from every place, e.g.:
 
 ## checkBuild 🚧
 
-This script is currently intended to be used with libraries build for iOS. It can be used to check iOS build artifacts for various unwanted stuff.
+This script is currently intended to be used with libraries build for iOS. It
+can be used to check iOS build artifacts for various unwanted stuff.
 
 The following functions will check:
 
@@ -47,7 +49,8 @@ If you check a build artifact with this script it will look like:
 
 ## checkCoverage
 
-This script is intended to be used for Xcode schemes which will be build and calls xcrun to view the coverage reports.
+This script is intended to be used for Xcode schemes which will be build and
+calls xcrun to view the coverage reports.
 
 ## checkForFlaggedTests
 

@@ -1,5 +1,9 @@
 # LLDB Debugging Commands
 
+- `p <variable>: print`
+- `po <variable>: is like print debug description`
+- `fr v <variable>: frame variable - print variable without changing the content`
+- `expr <expression>: execute the expression`
 - `po [UIWindow.keyWindow recursiveDescription]`
 - `po [UIViewController _printHierarchy]`
 - `po [UIView _autolayoutTrace]`
@@ -15,6 +19,7 @@ expr -l objc++ -O -- [UIWindow.keyWindow recursiveDescription]
 `command alias alt expr -l objc++ -O -- [[UIWindow keyWindow] _autolayoutTrace]`
 
 ## Chisel
+
 |Command          |Description     |iOS    |OS X   |
 |-----------------|----------------|-------|-------|
 |pviews           |Print the recursive view description for the key window.|Yes|Yes|
@@ -217,7 +222,7 @@ Current user-defined commands:
   panim         -- Prints if the code is currently execution with a UIView
                    animation block.
   pbcopy        -- Print object and copy output to clipboard
-  pblock        -- Print the block`s implementation address and signature
+  pblock        -- Print the block's implementation address and signature
   pbundlepath   -- Print application's bundle directory path.
   pca           -- Print layer tree from the perspective of the render server.
   pcells        -- Print the visible cells of the highest table view in the

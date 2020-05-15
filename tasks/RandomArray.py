@@ -1,13 +1,44 @@
 from numpy import random
+import time
 
-baseArray = list(range(0, 100))
-randomArray = []
+sizeOfArray = 100
 
-while len(randomArray) < len(baseArray):
-	randomValue = baseArray[random.randint(100)]
-	if randomValue in randomArray:
-		continue
-	else:
-		randomArray.append(randomValue)
+def simpleUniqueRandomArray(size):
+	randomArray = []
+	while len(randomArray) < size:
+		randomValue = random.randint(size)
+		if randomValue in randomArray:
+			continue
+		else:
+			randomArray.append(randomValue)
+	return randomArray
+
+start = time.clock()
+print "\nsimpleUniqueRandomArray:\n", simpleUniqueRandomArray(sizeOfArray)
+print "\nExecution time:" , time.clock() - start
+
+def setUniqueRandomArray(size):
+	randomArray = []
+	uniqueSet = set()
 	
-print(randomArray)
+	while len(randomArray) < size:
+		randomValue = random.randint(size)
+		if randomValue in uniqueSet:
+			continue
+		else:
+			uniqueSet.add(randomValue)
+			randomArray.append(randomValue)
+	return randomArray
+
+start = time.clock()
+print "\nsetUniqueRandomArray:\n", setUniqueRandomArray(sizeOfArray)
+print "\nExecution time:" , time.clock() - start
+
+def shuffleUniqueRandomArray(size):
+	randomArray = list(range(0, size))
+
+	return random.randint(size, size=(size))
+
+start = time.clock()
+print "\nshuffleUniqueRandomArray:\n", shuffleUniqueRandomArray(sizeOfArray)
+print "\nExecution time:" , time.clock() - start

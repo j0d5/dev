@@ -14,8 +14,8 @@ def simpleUniqueRandomArray(size):
 	return randomArray
 
 start = time.clock()
-print "\nsimpleUniqueRandomArray:\n", simpleUniqueRandomArray(sizeOfArray)
-print "\nExecution time:" , time.clock() - start
+print ("\nsimpleUniqueRandomArray:\n", simpleUniqueRandomArray(sizeOfArray))
+print ("\nExecution time:" , time.clock() - start)
 
 def setUniqueRandomArray(size):
 	randomArray = []
@@ -31,8 +31,8 @@ def setUniqueRandomArray(size):
 	return randomArray
 
 start = time.clock()
-print "\nsetUniqueRandomArray:\n", setUniqueRandomArray(sizeOfArray)
-print "\nExecution time:" , time.clock() - start
+print ("\nsetUniqueRandomArray:\n", setUniqueRandomArray(sizeOfArray))
+print ("\nExecution time:" , time.clock() - start)
 
 def shuffleUniqueRandomArray(size):
 	randomArray = list(range(0, size))
@@ -40,5 +40,5 @@ def shuffleUniqueRandomArray(size):
 	return random.randint(size, size=(size))
 
 start = time.clock()
-print "\nshuffleUniqueRandomArray:\n", shuffleUniqueRandomArray(sizeOfArray)
-print "\nExecution time:" , time.clock() - start
+print ("\nshuffleUniqueRandomArray:\n", shuffleUniqueRandomArray(sizeOfArray))
+print ("\nExecution time:" , time.clock() - start)
